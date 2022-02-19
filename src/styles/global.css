@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+/* Variables */
+:root {
+    --l-h: 1.5;
+    --ff-body: 'Manrope', sans-serif;
+    --root-fs: 63.5%;
+    --fs-quote: 1.5rem, 1.1286rem + 1.1607vw, 2.8rem;
+
+    /* Primary clr */
+    --light-cyan: 193, 38%, 86%;
+    --neon-green: 150, 100%, 66%;
+
+    /* Neutral Clr */
+    --grayish-blue: 217, 19%, 38%;
+    --dark-grayish-blue: 217, 19%, 24%;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html {
+    scroll-behavior: smooth;
+    font-size: var(--root-fs);
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: var(--l-h);
+    font-family: var(--ff-body);
+    font-size: clamp(var(--fs-quote));
+    font-weight: 800;
+    background: hsl(var(--dark-grayish-blue));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
