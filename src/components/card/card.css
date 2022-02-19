@@ -1,0 +1,75 @@
+.card {
+    background: hsl(var(--grayish-blue));
+    padding: 2em 1em;
+    min-height: 25rem;
+    border-radius: 2rem;
+    position: relative;
+    width: 50rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: var(--gap-2, 2rem);
+    box-shadow: 4px 8px 10px 0px rgb(0 0 0 / 20%);
+}
+
+@media only screen and (max-width: 60rem) {
+    .card {
+        width: 100%;
+    }
+
+    .loading_width {
+        width: 25rem;
+    }
+}
+
+.card__quote {
+    color: hsl(var(--light-cyan));
+}
+
+.card__quote::before {
+    content: open-quote;
+}
+
+.card__quote::after {
+    content: close-quote;
+}
+
+.card__idx {
+    color: hsl(var(--neon-green));
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.card__dice {
+    background: hsl(var(--neon-green));
+    padding: .6em;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10%;
+}
+
+.card__dice:hover > *,
+.card__dice {
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.card__dice:hover,
+.card__dice:focus {
+    box-shadow: 0 0 2.5rem hsl(var(--neon-green));
+    cursor: pointer;
+}
+
+.card__dice:hover > * {
+    transform: scale(1.1) rotate(20deg);
+}
+
+.card__loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

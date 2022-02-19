@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
 
+/* Set core root defaults */
+html {
+    scroll-behavior: smooth;
+    font-size: var(--root-fs);
+}
+
+
 /* Variables */
 :root {
     --l-h: 1.5;
@@ -12,8 +19,8 @@
     --neon-green: 150, 100%, 66%;
 
     /* Neutral Clr */
-    --grayish-blue: 217, 19%, 38%;
-    --dark-grayish-blue: 217, 19%, 24%;
+    --grayish-blue: 219, 19%, 24%;
+    --dark-grayish-blue: 218, 23%, 16%;
 }
 
 /* Box sizing rules */
@@ -41,12 +48,6 @@ dd {
 ul[role='list'],
 ol[role='list'] {
     list-style: none;
-}
-
-/* Set core root defaults */
-html {
-    scroll-behavior: smooth;
-    font-size: var(--root-fs);
 }
 
 /* Set core body defaults */
@@ -82,4 +83,10 @@ button,
 textarea,
 select {
     font: inherit;
+}
+
+.container {
+    max-width: 120rem;
+    margin-inline: auto;
+    padding-inline: 2em;
 }
